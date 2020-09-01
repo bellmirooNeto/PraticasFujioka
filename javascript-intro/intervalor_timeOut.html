@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <p id="cronometro"></p>
-    <p id="timer" ></p>
+    <p id="aulafuji"></p>
         <script>
-        var tempo = 0;
-        var contador = 20;
-        function cronometro (){
-            if (contador >=0) {
-                document.getElementById("cronometro").innerHTML = contador;
-                contador --;
-            }else{
-                clearInterval();
-            }
-        } 
-        function timer (){
-            if (contador >=0) {
-                document.getElementById("timer").innerHTML = tempo;
-                tempo ++;
-            }else{
-                clearInterval();
-            }
-        }          
+          
+          function exibeData(){
+            console.log(new Date())
+          }
+
+          //setInterval(exibeData, 1000);
           setInterval(() => {
-            timer();
+            exibeData();
           }, 1000);
-          setInterval(() => {
-            cronometro();
-          }, 1000);
+          //setTimeout(exibeData, 1000);
+          setTimeout(() => {
+              exibeData();
+          }, 5000);
                       
         </script>
 

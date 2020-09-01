@@ -3,28 +3,23 @@
 <body>
     <p id="aulafuji"></p>
         <script>
+
+            function subtrair(valorA, valorB){
+                var subtracao = valorA - valorB;
+                return subtracao;
+            }
+
             function somar(valorA, valorB){
                 var soma = valorA + valorB;
                 return soma;
             }
-            function diminuir(valorA, valorB){
-                var subtracao = valorA - valorB;
-                return subtracao;
-            }
-            function multiplicacao(valorA, valorB){
-                var multiplicacao = valorA * valorB;
-                return multiplicacao;
-            }
-            function divisao(valorA, valorB){
-                var divisao = valorA / valorB;
-                return divisao;
+
+            function exibirNome(nome){
+                window.alert(nome);
             }
             
             var soma = somar(4,5);
-            var subtracao = subtracao(10,5);
-            var multiplicacao = multiplicacao(4,3);
-            var divisao = divisao(20,4);
-            console.log(soma, subtracao, multiplicacao, divisao);
+            console.log(soma);
             exibirNome("Rodrigo Fujioka");
 
         </script>
