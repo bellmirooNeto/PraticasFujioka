@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="cronometro"></p>
+    <p id="timer" ></p>
+        <script>
+        var tempo = 0;
+        var contador = 20;
+        function cronometro (){
+            if (contador >=0) {
+                document.getElementById("cronometro").innerHTML = contador;
+                contador --;
+            }else{
+                clearInterval();
+            }
+        } 
+        function timer (){
+            if (contador >=0) {
+                document.getElementById("timer").innerHTML = tempo;
+                tempo ++;
+            }else{
+                clearInterval();
+            }
+        }          
+          setInterval(() => {
+            timer();
+          }, 1000);
+          setInterval(() => {
+            cronometro();
+          }, 1000);
+                      
+        </script>
+
+</body>
+</html>

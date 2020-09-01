@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="numeros"></p>
+    <p id="idade"></p>
+    <p id="sexo"></p>
+        <script>
+        var contador = 2;
+        var idade =15;
+        var sexo="f";
+        function par (){
+            if (contador / 2) {
+                document.getElementById("numeros").innerHTML = contador;
+                contador ++;
+            }else{
+                clearInterval();
+            }
+
+        } 
+        function VerificaSexo(){
+            if (idade>=18 && sexo =="m"){
+                console.log("pode entrar no bar com taxa");
+
+            } else if (idade<18 && sexo =="m"){
+                console.log("não pode entrar no bar");
+
+             } else if (idade>=18 && sexo =="f"){
+                console.log("pode entrar no bar sem taxa");
+                       
+             } else if (idade<18 && sexo =="f"){
+                console.log("não pode entrar no bar");              
+              }
+        }
+          setInterval(() => {
+            par();
+          }, 1000);
+          setInterval(() => {
+            VerificaSexo();
+          }, 1000);
+
+        </script>
+
+</body>
+</html>
